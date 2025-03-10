@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
     return (
-        <footer className="bg-gray-900 text-white p-4 text-center">
+        <footer className="bg-[#1e1e1e] text-red-500 p-4 text-center opacity-85 rounded-2xl">
             <p>&copy; {new Date().getFullYear()} Verő Mihály. All Rights Reserved.</p>
         </footer>
     );
