@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/my-website/static/css/main.e6c13ad2.css",
-    "main.js": "/my-website/static/js/main.d06c9edd.js",
-    "static/js/453.ad6eb26e.chunk.js": "/my-website/static/js/453.ad6eb26e.chunk.js",
-    "index.html": "/my-website/index.html",
-    "main.e6c13ad2.css.map": "/my-website/static/css/main.e6c13ad2.css.map",
-    "main.d06c9edd.js.map": "/my-website/static/js/main.d06c9edd.js.map",
-    "453.ad6eb26e.chunk.js.map": "/my-website/static/js/453.ad6eb26e.chunk.js.map"
+    "main.css": "/upgraded_website/static/css/main.4e8dd12d.css",
+    "main.js": "/upgraded_website/static/js/main.59cdcf75.js",
+    "static/js/453.ad6eb26e.chunk.js": "/upgraded_website/static/js/453.ad6eb26e.chunk.js",
+    "static/media/3d-game-preview.png": "/upgraded_website/static/media/3d-game-preview.53bc595a1fee31a36c13.png",
+    "index.html": "/upgraded_website/index.html",
+    "main.4e8dd12d.css.map": "/upgraded_website/static/css/main.4e8dd12d.css.map",
+    "main.59cdcf75.js.map": "/upgraded_website/static/js/main.59cdcf75.js.map",
+    "453.ad6eb26e.chunk.js.map": "/upgraded_website/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.d06c9edd.js"
+    "static/css/main.4e8dd12d.css",
+    "static/js/main.59cdcf75.js"
   ]
 }
