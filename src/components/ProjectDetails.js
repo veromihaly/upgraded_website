@@ -1,6 +1,64 @@
 import React from "react";
 
 function ProjectDetails({ project, onBack }) {
+  const renderDescription = () => {
+    switch (project.id) {
+      case "3d-survival-game":
+        return (
+          <>
+            <p className="mb-4">
+            A 3D survival RPG game I developed for my thesis project. The game allows players to either follow the main story or explore an open world where they can gather resources,
+            hunt animals, and survive. The project served as an opportunity to explore various aspects of Unity development, including script integration, animations, sound design, and scene management.
+            </p>
+            <p className="mb-4">
+              The project served as an opportunity to explore various aspects of Unity development, including <strong>script integration</strong>, <strong>animations</strong>, <strong>sound design</strong>, and <strong>scene management</strong>.
+            </p>
+            <p>
+              <strong>Technologies used:</strong> Unity, C#, Blender (for models), Photoshop (for textures), and JSON (for save/load systems).
+            </p>
+            <br></br>
+            <p className="text-2xl font-bold text-red-500 mb-4">
+            Challenges&Solutions:
+            </p>
+            <p>
+            -Integrating all of the game's elements, such as AI, animations, and sounds, while keeping the code organized. I leveraged Unity's prefab system to streamline the process.
+            </p>
+            <p>
+            -Sourcing the right prefabs and models from the Unity Store was a challenge. I spent time experimenting with different assets to find ones that best fit the game's style and mechanics.
+            </p>
+            <p>
+            -Implementing realistic animal movement required fine-tuning the AI. I used AI techniques to ensure smooth movement for animals in the environment.
+            -I had to sync sounds with animal and player movements. I created sound triggers in the game that would play specific sounds when the player or animals performed certain actions.
+            </p>
+            <p>
+            -Designing a system to allow the player to pick up items from the environment involved writing scripts to detect interactions and manage the inventory.
+            -Time Simulation: I implemented a day-night cycle by using Unity's time system to change the skybox and lighting, simulating the passing of days.
+            </p>
+            <p>
+            -A key feature was making the player character's movement feel responsive, which involved working on character control scripts and implementing jumping mechanics.
+            -Implementing a save system for player progress was challenging. To allow players to save and load their progress, I used JSON files to serialize and deserialize data. This method let me store information such as inventory items, player stats, and game progress, ensuring that players could resume from where they left off.
+            </p>
+          </>
+        );
+      case "personal-website":
+        return (
+          <>
+          <p className="mb-4">
+            This is my personal portfolio website, designed and developed from scratch to showcase my projects, skills, and experience as a software developer.
+          </p>
+          <p className="mb-4">
+            The website is built using <strong>React</strong> for dynamic component rendering and <strong>Tailwind CSS</strong> for fast, responsive, and modern styling. It features a clean dark-themed design with smooth animations, intuitive navigation, and a focus on accessibility and performance.
+          </p>
+          <p>
+            <strong>Technologies used:</strong> React, Tailwind CSS, GitHub Pages (for hosting), and Figma (for UI/UX planning).
+          </p>
+          </>
+        );
+      default:
+        return <p className="text-white">No description available.</p>;
+    }
+  };
+
   return (
     <section className="p-6">
       <button
@@ -18,8 +76,9 @@ function ProjectDetails({ project, onBack }) {
         className="h-48 object-cover rounded-lg mb-6"
       />
 
-      <p className="text-white text-lg">{project.detailedDescription}</p>
-
+      <div className="text-white text-lg leading-relaxed">
+        {renderDescription()}
+      </div>
       <a
         href={project.githubLink}
         target="_blank"
