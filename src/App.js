@@ -16,7 +16,8 @@ const projectList = [
     title: "3D Survival Game",
     description:
     "A Unity survival game featuring crafting, exploration, and a dynamic day-night cycle.",
-    image: gamePreview,
+    image: gamePreview, 
+    githubLink:"https://github.com/veromihaly/Wilderness_Odyssey"
   },
   {
     id: "personal-website",
@@ -24,6 +25,7 @@ const projectList = [
     description:
     "My React-based portfolio showcasing my projects and skills.",
     image: websitePreview,
+    githubLink:"https://github.com/veromihaly/upgraded_website"
   },
 ];
 
