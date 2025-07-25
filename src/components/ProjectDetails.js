@@ -54,6 +54,20 @@ function ProjectDetails({ project, onBack }) {
           </p>
           </>
         );
+      case "todo-app":
+        return (
+          <>
+            <p className="mb-4">
+              This is a simple yet functional ToDo web application built using <strong>ASP.NET Core MVC</strong>. It allows users to create, manage, and track their daily tasks with a clean and responsive interface.
+            </p>
+            <p className="mb-4">
+              The application features <strong>task creation, editing, deletion, completion tracking</strong>, and stores data using <strong>Entity Framework Core</strong> with a local SQL database. It also includes a dynamic <strong>dark/light theme switcher</strong> with persistent settings.
+            </p>
+            <p>
+              <strong>Technologies used:</strong> ASP.NET Core MVC, C#, Razor Pages, Entity Framework Core, SQL Server, Bootstrap, and JavaScript.
+            </p>
+          </>
+        );        
       default:
         return <p className="text-white">No description available.</p>;
     }

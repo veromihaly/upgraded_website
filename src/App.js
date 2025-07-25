@@ -9,6 +9,7 @@ import ParticlesBackground from "./components/ParticlesBackground";
 import "./styles.css";
 import gamePreview from './images/3d-game-preview.png';
 import websitePreview from './images/website-preview.png';
+import todoAppPreview from './images/todoAppPreview.png';
 
 const projectList = [
   {
@@ -26,6 +27,14 @@ const projectList = [
     "My React-based portfolio showcasing my projects and skills.",
     image: websitePreview,
     githubLink:"https://github.com/veromihaly/upgraded_website"
+  },
+  {
+    id: "todo-app",
+    title: "Task Manager Web App",
+    description:
+    "A full-featured ToDo list app developed using ASP.NET Core MVC and Entity Framework, featuring Bootstrap-based UI, dark mode, and animations.",
+    image: todoAppPreview,
+    githubLink:"https://github.com/veromihaly/ToDoApp"
   },
 ];
 

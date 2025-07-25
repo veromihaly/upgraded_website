@@ -12,7 +12,7 @@ function Projects({projects, onProjectClick}) {
                         className="relative cursor-pointer rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group"
                     >
                         <div
-                            className="w-full h-64 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-300"
+                            className="w-full h-64 bg-contain bg-center bg-no-repeat transform group-hover:scale-105 transition-transform duration-300"
                             style={{ backgroundImage: `url(${project.image})` }}
                         ></div>
                         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
