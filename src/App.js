@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import ProjectDetails from "./components/ProjectDetails";
 import Contact from "./components/Contact";
@@ -58,27 +59,55 @@ function App() {
   };
 
   return (
-    <div className="section">
-      <ParticlesBackground />
-      <Header activeSection={activeSection} onSectionClick={handleSectionClick} />
-      <main>
-        {activeSection === 'about' && <About />}
-        {activeSection === 'projects' && (
-          <Projects
-            projects={projectList}
-            onProjectClick={handleProjectClick}
-          />
+    <div className="relative min-h-screen bg-surface text-textDark">
+    {/* Background particles */}
+    <ParticlesBackground />
+
+    {/* Page content */}
+    <div className="relative z-10 flex flex-col min-h-screen">
+      <Header
+        activeSection={activeSection}
+        onSectionClick={handleSectionClick}
+      />
+
+      <main className="flex-grow">
+        {activeSection === "about" && (
+          <section className="py-20">
+            <About />
+          </section>
         )}
+
+        {activeSection === "projects" && (
+          <section className="py-20">
+            <Projects
+              projects={projectList}
+              onProjectClick={handleProjectClick}
+            />
+          </section>
+        )}
+
         {activeSection === "projectDetails" && activeProject && (
-          <ProjectDetails
-            project={activeProject}
-            onBack={handleBackToProjects}
-          />
+          <section className="py-20">
+            <ProjectDetails
+              project={activeProject}
+              onBack={handleBackToProjects}
+            />
+          </section>
         )}
-        {activeSection === 'contact' && <Contact />}
+
+        {activeSection === 'experience' && <Experience />}
+
+
+        {activeSection === "contact" && (
+          <section className="py-20">
+            <Contact />
+          </section>
+        )}
       </main>
+
       <Footer />
     </div>
+  </div>
   );
 }
 
